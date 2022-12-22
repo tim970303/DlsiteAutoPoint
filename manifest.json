@@ -1,0 +1,26 @@
+{
+    "name": "Dlsite Auto Point",
+    "version": "0.1.0",
+    "description": "Automatically get daily point from dlsite",
+    "permissions": ["storage","cookies"],
+    "host_permissions": ["https://*.dlsite.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.dlsite.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "assets/ext-icon.png",
+        "24": "assets/ext-icon.png",
+        "32": "assets/ext-icon.png"
+      },
+      "default_title": "Dlsite Auto Point",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
