@@ -9,6 +9,10 @@
     padding: 8px;
   }
 
+  .login {
+    display : none;
+  }
+
   .button {
     justify-content: center;
     display: inline-block;
