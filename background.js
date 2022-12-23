@@ -27,10 +27,13 @@ function caculatePoint(){
         return response.json();
     })
     .then((result) => {
-        let temp = result['class'][2];
-        temp = temp.split("_")[1];
-        temp = parseInt(temp);
-        if(temp == 1){
+        let temp = 0;
+        if(result['class'].length > 2){
+            temp = result['class'][2];
+            temp = temp.split("_")[1];
+            temp = parseInt(temp);
+        }
+        if(temp == 1 || result['class'].length == 2){
             point = 0;
         }else{
             temp = (temp - 2) % 3;
