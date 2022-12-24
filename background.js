@@ -53,5 +53,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     }
 });
 
-chrome.windows.onCreated.addListener(getPoint())
+chrome.windows.onCreated.addListener(function() {
+    getPoint();
+})
 

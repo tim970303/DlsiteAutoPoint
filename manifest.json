@@ -2,7 +2,7 @@
     "name": "Dlsite Auto Point",
     "version": "1.0.0",
     "description": "Automatically get daily point from dlsite",
-    "permissions": ["alarms","tabs","storage"],
+    "permissions": ["alarms","tabs"],
     "host_permissions": ["https://*.dlsite.com/*"],
     "background": {
       "service_worker": "background.js"
